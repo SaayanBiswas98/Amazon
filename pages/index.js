@@ -6,7 +6,7 @@ import Image from 'next/image'
 const Home=() => {
   return (
       <div className="w-full">
-        <div className='w-90'>
+        <div className='w-90 z-2 sticky'>
           <Sidebar/>
         </div>      
       </div>

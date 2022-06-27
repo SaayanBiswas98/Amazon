@@ -1,8 +1,24 @@
+import iphone from '../components/iphone.jpg';
+import shoe from "../components/shoe.jpg";
+
 const style={
     option:`m-5`
 }
 
-const Content=()=>{
+const phone=[
+    {
+        name:'iphone',
+        image:iphone,
+        pricemultiplier:988.90
+    },
+    {
+        name:'shoe',
+        image:shoe,
+        pricemultiplier:988.90
+    },
+]
+
+const Cart=()=>{
     return(
         <div className="flex  justify-between z-67 fixed right-0">
            <div className="flex w-13">
@@ -16,7 +32,20 @@ const Content=()=>{
                 <div className={style.option}>Featured</div>
                 <div className={style.option}>Cart</div>
             </div>
+            <div className={style.phone}>
+            {phone.map((phones,index)=>(
+                <div className={style.phones}>
+                    <Image src={phones.image} width={60} height={65}/>
+                    {phones.name}
+                    ${phones.pricemultiplier}
+                <button className={style.buy}>
+                    Add to Cart
+                </button>
+                </div>
+                
+            ))}  
+        </div>
         </div>
     )
 }
-export default Content;
+export default Cart;

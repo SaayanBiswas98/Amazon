@@ -3,8 +3,8 @@ import Image from 'next/Image'
 import Link from "next/link"
 
 const style={
-    wrapper:` bg-blue-900 ml-9 w-[290px] h-[100px]  `,
-    main:`flex w-full h-full justify-center w-[200px] flex-col ml-5 `
+    wrapper:` bg-blue-900 ml-auto mr-auto   `,
+    main:`flex w-[90px] mr-auto flex-col ml-auto justify-center h-screen`
 }
 
 export default function Signin(){
